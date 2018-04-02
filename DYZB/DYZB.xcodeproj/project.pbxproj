@@ -19,6 +19,8 @@
 		54D5E6A52071D590001CD691 /* LWTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5E6A42071D590001CD691 /* LWTabBarController.swift */; };
 		54D5E6BC2071D6D7001CD691 /* LWHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5E6BB2071D6D7001CD691 /* LWHomeViewController.swift */; };
 		54D5E6BF2071DC47001CD691 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5E6BE2071DC47001CD691 /* UIBarButtonItem-Extension.swift */; };
+		54D5E6C2207201DB001CD691 /* LWPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5E6C1207201DB001CD691 /* LWPageTitleView.swift */; };
+		54D5E6C4207206E9001CD691 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5E6C3207206E9001CD691 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		54D5E6A42071D590001CD691 /* LWTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LWTabBarController.swift; sourceTree = "<group>"; };
 		54D5E6BB2071D6D7001CD691 /* LWHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWHomeViewController.swift; sourceTree = "<group>"; };
 		54D5E6BE2071DC47001CD691 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
+		54D5E6C1207201DB001CD691 /* LWPageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWPageTitleView.swift; sourceTree = "<group>"; };
+		54D5E6C3207206E9001CD691 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				54D5E66D2071C845001CD691 /* Main.storyboard */,
+				54D5E6C0207201CA001CD691 /* View */,
 				54D5E6A32071D590001CD691 /* Controller */,
 				54D5E6802071C9B9001CD691 /* Other */,
 			);
@@ -154,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				54D5E6BD2071DBBB001CD691 /* Extension */,
+				54D5E6C3207206E9001CD691 /* Common.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -259,6 +265,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		54D5E6C0207201CA001CD691 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				54D5E6C1207201DB001CD691 /* LWPageTitleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -337,8 +351,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				54D5E6BC2071D6D7001CD691 /* LWHomeViewController.swift in Sources */,
+				54D5E6C2207201DB001CD691 /* LWPageTitleView.swift in Sources */,
 				54D5E6A52071D590001CD691 /* LWTabBarController.swift in Sources */,
 				54D5E6BF2071DC47001CD691 /* UIBarButtonItem-Extension.swift in Sources */,
+				54D5E6C4207206E9001CD691 /* Common.swift in Sources */,
 				54D5E6852071C9B9001CD691 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
