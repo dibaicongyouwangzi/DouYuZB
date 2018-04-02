@@ -16,7 +16,9 @@
 		54D5E68C2071CB61001CD691 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D5E68A2071CB61001CD691 /* Live.storyboard */; };
 		54D5E68F2071CB72001CD691 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D5E68D2071CB72001CD691 /* Follow.storyboard */; };
 		54D5E6922071CB82001CD691 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D5E6902071CB82001CD691 /* Profile.storyboard */; };
-		54D5E6942071CDC8001CD691 /* LWTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5E6932071CDC8001CD691 /* LWTabBarController.swift */; };
+		54D5E6A52071D590001CD691 /* LWTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5E6A42071D590001CD691 /* LWTabBarController.swift */; };
+		54D5E6BC2071D6D7001CD691 /* LWHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5E6BB2071D6D7001CD691 /* LWHomeViewController.swift */; };
+		54D5E6BF2071DC47001CD691 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5E6BE2071DC47001CD691 /* UIBarButtonItem-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +32,9 @@
 		54D5E68B2071CB61001CD691 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DYZB/Base.lproj/Live.storyboard; sourceTree = "<group>"; };
 		54D5E68E2071CB72001CD691 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DYZB/Base.lproj/Follow.storyboard; sourceTree = "<group>"; };
 		54D5E6912071CB82001CD691 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DYZB/Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
-		54D5E6932071CDC8001CD691 /* LWTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWTabBarController.swift; sourceTree = "<group>"; };
+		54D5E6A42071D590001CD691 /* LWTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LWTabBarController.swift; sourceTree = "<group>"; };
+		54D5E6BB2071D6D7001CD691 /* LWHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWHomeViewController.swift; sourceTree = "<group>"; };
+		54D5E6BE2071DC47001CD691 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,9 @@
 		54D5E67C2071C9B9001CD691 /* Follow */ = {
 			isa = PBXGroup;
 			children = (
+				54D5E6B12071D5D8001CD691 /* Model */,
+				54D5E6B02071D5D8001CD691 /* View */,
+				54D5E6AF2071D5D8001CD691 /* Controller */,
 				54D5E68D2071CB72001CD691 /* Follow.storyboard */,
 			);
 			path = Follow;
@@ -94,6 +101,9 @@
 		54D5E67D2071C9B9001CD691 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				54D5E6A72071D5AB001CD691 /* Model */,
+				54D5E6A82071D5AB001CD691 /* View */,
+				54D5E6A62071D5AA001CD691 /* Controller */,
 				54D5E6872071CAC6001CD691 /* Home.storyboard */,
 			);
 			path = Home;
@@ -102,6 +112,9 @@
 		54D5E67E2071C9B9001CD691 /* Live */ = {
 			isa = PBXGroup;
 			children = (
+				54D5E6AE2071D5C8001CD691 /* Model */,
+				54D5E6AD2071D5C8001CD691 /* View */,
+				54D5E6AC2071D5C8001CD691 /* Controller */,
 				54D5E68A2071CB61001CD691 /* Live.storyboard */,
 			);
 			path = Live;
@@ -111,7 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				54D5E66D2071C845001CD691 /* Main.storyboard */,
-				54D5E6932071CDC8001CD691 /* LWTabBarController.swift */,
+				54D5E6A32071D590001CD691 /* Controller */,
 				54D5E6802071C9B9001CD691 /* Other */,
 			);
 			path = Main;
@@ -129,6 +142,9 @@
 		54D5E6832071C9B9001CD691 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				54D5E6B82071D602001CD691 /* Model */,
+				54D5E6BA2071D602001CD691 /* View */,
+				54D5E6B92071D602001CD691 /* Controller */,
 				54D5E6902071CB82001CD691 /* Profile.storyboard */,
 			);
 			path = Profile;
@@ -137,8 +153,110 @@
 		54D5E6842071C9B9001CD691 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				54D5E6BD2071DBBB001CD691 /* Extension */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		54D5E6A32071D590001CD691 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				54D5E6A42071D590001CD691 /* LWTabBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		54D5E6A62071D5AA001CD691 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				54D5E6BB2071D6D7001CD691 /* LWHomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		54D5E6A72071D5AB001CD691 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		54D5E6A82071D5AB001CD691 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		54D5E6AC2071D5C8001CD691 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		54D5E6AD2071D5C8001CD691 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		54D5E6AE2071D5C8001CD691 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		54D5E6AF2071D5D8001CD691 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		54D5E6B02071D5D8001CD691 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		54D5E6B12071D5D8001CD691 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		54D5E6B82071D602001CD691 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		54D5E6B92071D602001CD691 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		54D5E6BA2071D602001CD691 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		54D5E6BD2071DBBB001CD691 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				54D5E6BE2071DC47001CD691 /* UIBarButtonItem-Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,7 +336,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54D5E6942071CDC8001CD691 /* LWTabBarController.swift in Sources */,
+				54D5E6BC2071D6D7001CD691 /* LWHomeViewController.swift in Sources */,
+				54D5E6A52071D590001CD691 /* LWTabBarController.swift in Sources */,
+				54D5E6BF2071DC47001CD691 /* UIBarButtonItem-Extension.swift in Sources */,
 				54D5E6852071C9B9001CD691 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
