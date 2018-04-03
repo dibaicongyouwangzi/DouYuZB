@@ -33,6 +33,7 @@ class LWHomeViewController: UIViewController {
             childVcs.append(vc)
         }
         let contentView = LWPageContentView(frame: contentFrame, childVcs: childVcs, parentVc: self)
+        contentView.delegate = self
         return contentView
     }()
     
@@ -79,5 +80,12 @@ extension LWHomeViewController {
 extension LWHomeViewController : LWPageTitleViewDelegate {
     func pageTitleView(titleView: LWPageTitleView, selectedIndex index: Int) {
         pageContentView.setCurrentIndex(currentIndex: index)
+    }
+}
+
+// MARK:- 遵守LWPageContentViewDelegate协议
+extension LWHomeViewController : LWPageContentViewDelegate {
+    func pageContentView(contentView: LWPageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleView.setTitle(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }

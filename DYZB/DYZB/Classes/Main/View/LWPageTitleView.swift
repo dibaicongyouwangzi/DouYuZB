@@ -141,3 +141,10 @@ extension LWPageTitleView {
         delegate?.pageTitleView(titleView: self, selectedIndex: currentIndex)
     }
 }
+
+// MARK:- 对外暴露的方法
+extension LWPageTitleView {
+    func setTitle(progress : CGFloat, sourceIndex : Int, targetIndex : Int) {
+        
+    }
+}

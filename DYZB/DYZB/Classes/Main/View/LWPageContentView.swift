@@ -7,6 +7,10 @@
 //
 
 import UIKit
+ 
+ protocol LWPageContentViewDelegate : class {
+    func pageContentView(contentView : LWPageContentView, progress: CGFloat, sourceIndex : Int, targetIndex : Int)
+ }
 
 private let ContentCellID = "ContentCellID"
  
@@ -15,6 +19,8 @@ class LWPageContentView: UIView {
     // MARK:- 定义属性
     private var childVcs : [UIViewController]
     private weak var parentVc : UIViewController?
+    private var startOffsetX : CGFloat = 0
+    weak var delegate : LWPageContentViewDelegate?
     
     // MARK:- 懒加载属性
     private lazy var collectionView : UICollectionView = { [weak self] in
@@ -31,6 +37,7 @@ class LWPageContentView: UIView {
         collectionView.isPagingEnabled = true
         collectionView.bounces = false
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: ContentCellID)
         
         return collectionView
@@ -84,6 +91,60 @@ extension LWPageContentView : UICollectionViewDataSource {
         cell.contentView.addSubview(childVc.view)
         
         return cell
+    }
+}
+ 
+// MARK:- 遵守UICollectionViewDelegate
+extension LWPageContentView : UICollectionViewDelegate {
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        startOffsetX = scrollView.contentOffset.x
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // 1.定义需要获取的数据
+        var progress : CGFloat = 0
+        var sourceIndex : Int = 0
+        var targetIndex : Int = 0
+        
+        // 2.判断是左滑还是右滑
+        let currentOffsetX = scrollView.contentOffset.x
+        if currentOffsetX > startOffsetX { // 左滑
+            // 2.1计算progress
+            let ratio = currentOffsetX / scrollView.bounds.width
+            progress = ratio - floor(ratio)
+            
+            // 2.2计算sourceIndex
+            sourceIndex = Int(currentOffsetX / scrollView.bounds.width)
+            
+            // 2.3计算targetIndex
+            targetIndex = sourceIndex + 1
+            if targetIndex >= childVcs.count {
+                targetIndex = childVcs.count - 1
+            }
+            
+            // 2.4如果完全滑过去
+            if currentOffsetX - startOffsetX == scrollView.bounds.width {
+                progress = 1
+                targetIndex = sourceIndex
+            }
+        } else { // 右滑
+            // 2.1计算progress
+            let ratio = currentOffsetX / scrollView.bounds.width
+            progress = 1 - (ratio - floor(ratio))
+            
+            // 2.2计算targetIndex
+            targetIndex = Int(currentOffsetX / scrollView.bounds.width)
+            
+            // 2.3计算sourceIndex
+            sourceIndex = targetIndex + 1
+            if sourceIndex >= childVcs.count {
+                sourceIndex = childVcs.count - 1
+            }
+        }
+        
+        // 3.将progress、sourceIndex、targetIndex传递给LWPageTitleView
+        delegate?.pageContentView(contentView: self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }
  
