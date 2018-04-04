@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		542F1761207363AE0093A57F /* LWRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542F1760207363AE0093A57F /* LWRecommendViewController.swift */; };
+		542F1766207384440093A57F /* LWCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542F1764207384440093A57F /* LWCollectionHeaderView.swift */; };
+		542F1767207384440093A57F /* LWCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 542F1765207384440093A57F /* LWCollectionHeaderView.xib */; };
+		547FF20420745FC600D224E9 /* LWNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FF20220745FC600D224E9 /* LWNormalCell.swift */; };
+		547FF20520745FC600D224E9 /* LWNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547FF20320745FC600D224E9 /* LWNormalCell.xib */; };
 		54D5E66F2071C845001CD691 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D5E66D2071C845001CD691 /* Main.storyboard */; };
 		54D5E6712071C845001CD691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54D5E6702071C845001CD691 /* Assets.xcassets */; };
 		54D5E6742071C845001CD691 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D5E6722071C845001CD691 /* LaunchScreen.storyboard */; };
@@ -28,6 +32,10 @@
 
 /* Begin PBXFileReference section */
 		542F1760207363AE0093A57F /* LWRecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWRecommendViewController.swift; sourceTree = "<group>"; };
+		542F1764207384440093A57F /* LWCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWCollectionHeaderView.swift; sourceTree = "<group>"; };
+		542F1765207384440093A57F /* LWCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LWCollectionHeaderView.xib; sourceTree = "<group>"; };
+		547FF20220745FC600D224E9 /* LWNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWNormalCell.swift; sourceTree = "<group>"; };
+		547FF20320745FC600D224E9 /* LWNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LWNormalCell.xib; sourceTree = "<group>"; };
 		54D5E6662071C845001CD691 /* DYZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D5E66E2071C845001CD691 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54D5E6702071C845001CD691 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -197,6 +205,8 @@
 		54D5E6A82071D5AB001CD691 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				542F1764207384440093A57F /* LWCollectionHeaderView.swift */,
+				542F1765207384440093A57F /* LWCollectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,6 +288,8 @@
 			children = (
 				54D5E6C1207201DB001CD691 /* LWPageTitleView.swift */,
 				54D5E6C520721DE2001CD691 /* LWPageContentView.swift */,
+				547FF20220745FC600D224E9 /* LWNormalCell.swift */,
+				547FF20320745FC600D224E9 /* LWNormalCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -341,8 +353,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				542F1767207384440093A57F /* LWCollectionHeaderView.xib in Resources */,
 				54D5E6862071C9B9001CD691 /* Info.plist in Resources */,
 				54D5E6892071CAC6001CD691 /* Home.storyboard in Resources */,
+				547FF20520745FC600D224E9 /* LWNormalCell.xib in Resources */,
 				54D5E6922071CB82001CD691 /* Profile.storyboard in Resources */,
 				54D5E68C2071CB61001CD691 /* Live.storyboard in Resources */,
 				54D5E6742071C845001CD691 /* LaunchScreen.storyboard in Resources */,
@@ -359,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				547FF20420745FC600D224E9 /* LWNormalCell.swift in Sources */,
 				54D5E6BC2071D6D7001CD691 /* LWHomeViewController.swift in Sources */,
 				54D5E6C82072219E001CD691 /* UIColor-Extension.swift in Sources */,
 				54D5E6C2207201DB001CD691 /* LWPageTitleView.swift in Sources */,
@@ -367,6 +382,7 @@
 				54D5E6C4207206E9001CD691 /* Common.swift in Sources */,
 				542F1761207363AE0093A57F /* LWRecommendViewController.swift in Sources */,
 				54D5E6C620721DE2001CD691 /* LWPageContentView.swift in Sources */,
+				542F1766207384440093A57F /* LWCollectionHeaderView.swift in Sources */,
 				54D5E6852071C9B9001CD691 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
