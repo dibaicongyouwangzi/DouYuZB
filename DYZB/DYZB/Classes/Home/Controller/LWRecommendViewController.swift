@@ -21,6 +21,8 @@ private let kHeaderViewID = "kHeaderViewID"
 class LWRecommendViewController: UIViewController {
 
     // MARK:- 懒加载属性
+    private lazy var recommendVM : LWRecommendViewModel = LWRecommendViewModel()
+    
     private lazy var collectionView : UICollectionView = { [unowned self] in
         // 1.创建布局
         let layout = UICollectionViewFlowLayout()
@@ -51,6 +53,9 @@ class LWRecommendViewController: UIViewController {
         
         // 设置UI界面
         setupUI()
+        
+        // 发送网络请求
+        loadData()
     }
 }
 
@@ -59,6 +64,13 @@ extension LWRecommendViewController {
     private func setupUI() {
         // 1.将UICollectionView添加到控制器的view中
         view.addSubview(collectionView)
+    }
+}
+
+// MARK:- 请求数据
+extension LWRecommendViewController {
+    private func loadData() {
+        recommendVM.requestData()
     }
 }
 
