@@ -16,6 +16,9 @@
 		547FF20920746E1B00D224E9 /* LWPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547FF20720746E1B00D224E9 /* LWPrettyCell.xib */; };
 		547FF22D2074CBA300D224E9 /* LWNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FF22C2074CBA300D224E9 /* LWNetworkTools.swift */; };
 		547FF2302074D08600D224E9 /* LWRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FF22F2074D08600D224E9 /* LWRecommendViewModel.swift */; };
+		547FF2322074D7E300D224E9 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FF2312074D7E300D224E9 /* NSDate-Extension.swift */; };
+		548A18E220753061007AE3C7 /* LWAnchorGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A18E120753061007AE3C7 /* LWAnchorGroupModel.swift */; };
+		548A18EC20768782007AE3C7 /* LWAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A18EB20768782007AE3C7 /* LWAnchorModel.swift */; };
 		54D5E66F2071C845001CD691 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D5E66D2071C845001CD691 /* Main.storyboard */; };
 		54D5E6712071C845001CD691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54D5E6702071C845001CD691 /* Assets.xcassets */; };
 		54D5E6742071C845001CD691 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D5E6722071C845001CD691 /* LaunchScreen.storyboard */; };
@@ -45,6 +48,9 @@
 		547FF20720746E1B00D224E9 /* LWPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LWPrettyCell.xib; sourceTree = "<group>"; };
 		547FF22C2074CBA300D224E9 /* LWNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LWNetworkTools.swift; sourceTree = "<group>"; };
 		547FF22F2074D08600D224E9 /* LWRecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWRecommendViewModel.swift; sourceTree = "<group>"; };
+		547FF2312074D7E300D224E9 /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		548A18E120753061007AE3C7 /* LWAnchorGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWAnchorGroupModel.swift; sourceTree = "<group>"; };
+		548A18EB20768782007AE3C7 /* LWAnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LWAnchorModel.swift; sourceTree = "<group>"; };
 		54D5E6662071C845001CD691 /* DYZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D5E66E2071C845001CD691 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54D5E6702071C845001CD691 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +99,15 @@
 				547FF22F2074D08600D224E9 /* LWRecommendViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		548A18E020753028007AE3C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				548A18E120753061007AE3C7 /* LWAnchorGroupModel.swift */,
+				548A18EB20768782007AE3C7 /* LWAnchorModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		54D5E65D2071C845001CD691 = {
@@ -174,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				54D5E66D2071C845001CD691 /* Main.storyboard */,
+				548A18E020753028007AE3C7 /* Model */,
 				54D5E6C0207201CA001CD691 /* View */,
 				54D5E6A32071D590001CD691 /* Controller */,
 				54D5E6802071C9B9001CD691 /* Other */,
@@ -312,6 +328,7 @@
 			children = (
 				54D5E6BE2071DC47001CD691 /* UIBarButtonItem-Extension.swift */,
 				54D5E6C72072219D001CD691 /* UIColor-Extension.swift */,
+				547FF2312074D7E300D224E9 /* NSDate-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -479,10 +496,13 @@
 				54D5E6BF2071DC47001CD691 /* UIBarButtonItem-Extension.swift in Sources */,
 				54D5E6C4207206E9001CD691 /* Common.swift in Sources */,
 				542F1761207363AE0093A57F /* LWRecommendViewController.swift in Sources */,
+				547FF2322074D7E300D224E9 /* NSDate-Extension.swift in Sources */,
 				547FF20820746E1B00D224E9 /* LWPrettyCell.swift in Sources */,
 				54D5E6C620721DE2001CD691 /* LWPageContentView.swift in Sources */,
 				542F1766207384440093A57F /* LWCollectionHeaderView.swift in Sources */,
 				54D5E6852071C9B9001CD691 /* AppDelegate.swift in Sources */,
+				548A18E220753061007AE3C7 /* LWAnchorGroupModel.swift in Sources */,
+				548A18EC20768782007AE3C7 /* LWAnchorModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
