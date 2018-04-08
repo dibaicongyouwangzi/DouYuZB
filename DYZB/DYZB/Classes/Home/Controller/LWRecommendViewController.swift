@@ -70,22 +70,21 @@ extension LWRecommendViewController {
 // MARK:- 请求数据
 extension LWRecommendViewController {
     private func loadData() {
-        recommendVM.requestData()
+        recommendVM.requestData {
+            self.collectionView.reloadData()
+        }
     }
 }
 
 // MARK:- 遵守UICollectionView的数据源协议
 extension LWRecommendViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+        return recommendVM.anchorGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 8
-        } else {
-            return 4
-        }
+        let group = recommendVM.anchorGroups[section]
+        return group.anchors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -104,7 +103,10 @@ extension LWRecommendViewController : UICollectionViewDataSource, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         // 1.取出sectionHeaderView
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath)
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! LWCollectionHeaderView
+        
+        // 2.取出模型
+        headerView.group = recommendVM.anchorGroups[indexPath.section]
         
         return headerView
     }
@@ -114,7 +116,6 @@ extension LWRecommendViewController : UICollectionViewDataSource, UICollectionVi
         if indexPath.section == 1 { // 颜值组
             return CGSize(width: kItemW, height: kPrettyItemH)
         }
-        
         return CGSize(width: kItemW, height: kNormalItemH)
     }
 }

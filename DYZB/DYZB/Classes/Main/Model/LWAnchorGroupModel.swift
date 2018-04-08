@@ -15,15 +15,30 @@ class LWAnchorGroupModel: NSObject {
     var tag_name : String = ""
     // 组显示的图标
     var icon_name : String = "home_header_normal"
+    // 定义主播的模型对象
+    lazy var anchors : [LWAnchorModel] = [LWAnchorModel]()
+
+    override init() {
+        
+    }
     
     init(dict : [String : NSObject]) {
-        super.init()
+        self.room_list = dict["room_list"] as? [[String : NSObject]] ?? []
+        self.tag_name = dict["tag_name"] as? String ?? ""
+        self.icon_name = dict["icon_name"] as? String ?? "home_header_normal"
         
+        super.init()
         setValuesForKeys(dict)
     }
     
     override func setValue(_ value: Any?, forKey key: String) {
-        super.setValue(value, forKey: key)
+        if key == "room_list" {
+            if let dataArray = value as? [[String : NSObject]] {
+                for dict in dataArray {
+                    anchors.append(LWAnchorModel(dict: dict))
+                }
+            }
+        }
     }
 
     override func setValue(_ value: Any?, forUndefinedKey key: String) {}

@@ -21,8 +21,18 @@ class LWAnchorModel: NSObject {
     var nickname : String = ""
     // 观看人数
     var online : Int = 0
+    // 所在城市
+    var anchor_city : String = ""
     
     init(dict : [String : NSObject]) {
+        self.room_id = dict["room_id"] as? Int ?? 0
+        self.vertical_src = dict["vertical_src"] as? String ?? ""
+        self.isVertical = dict["isVertical"] as? Int ?? 0
+        self.room_name = dict["room_name"] as? String ?? ""
+        self.nickname = dict["nickname"] as? String ?? ""
+        self.online = dict["online"] as? Int ?? 0
+        self.anchor_city = dict["anchor_city"] as? String ?? ""
+        
         super.init()
         setValuesForKeys(dict)
     }
