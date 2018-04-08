@@ -8,11 +8,18 @@
 
 import UIKit
 
-class LWNormalCell: UICollectionViewCell {
+class LWNormalCell: LWCollectionBaseCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
+    // MARK:- 控件的属性
+    @IBOutlet weak var roomNameLabel: UILabel!
+    
+    // MARK:- 定义模型属性
+    override var anchor : LWAnchorModel? {
+        didSet {
+            super.anchor = anchor
+            
+            // 4.房间名称
+            roomNameLabel.text = anchor?.room_name
+        }
     }
-
 }

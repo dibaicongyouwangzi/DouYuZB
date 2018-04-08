@@ -17,6 +17,7 @@
 		547FF22D2074CBA300D224E9 /* LWNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FF22C2074CBA300D224E9 /* LWNetworkTools.swift */; };
 		547FF2302074D08600D224E9 /* LWRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FF22F2074D08600D224E9 /* LWRecommendViewModel.swift */; };
 		547FF2322074D7E300D224E9 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FF2312074D7E300D224E9 /* NSDate-Extension.swift */; };
+		548010A42079E64800677A06 /* LWCollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548010A32079E64800677A06 /* LWCollectionBaseCell.swift */; };
 		548A18E220753061007AE3C7 /* LWAnchorGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A18E120753061007AE3C7 /* LWAnchorGroupModel.swift */; };
 		548A18EC20768782007AE3C7 /* LWAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A18EB20768782007AE3C7 /* LWAnchorModel.swift */; };
 		54D5E66F2071C845001CD691 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D5E66D2071C845001CD691 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		547FF22C2074CBA300D224E9 /* LWNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LWNetworkTools.swift; sourceTree = "<group>"; };
 		547FF22F2074D08600D224E9 /* LWRecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWRecommendViewModel.swift; sourceTree = "<group>"; };
 		547FF2312074D7E300D224E9 /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		548010A32079E64800677A06 /* LWCollectionBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWCollectionBaseCell.swift; sourceTree = "<group>"; };
 		548A18E120753061007AE3C7 /* LWAnchorGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWAnchorGroupModel.swift; sourceTree = "<group>"; };
 		548A18EB20768782007AE3C7 /* LWAnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LWAnchorModel.swift; sourceTree = "<group>"; };
 		54D5E6662071C845001CD691 /* DYZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -342,6 +344,7 @@
 				547FF20320745FC600D224E9 /* LWNormalCell.xib */,
 				547FF20620746E1B00D224E9 /* LWPrettyCell.swift */,
 				547FF20720746E1B00D224E9 /* LWPrettyCell.xib */,
+				548010A32079E64800677A06 /* LWCollectionBaseCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				54D5E6C2207201DB001CD691 /* LWPageTitleView.swift in Sources */,
 				54D5E6A52071D590001CD691 /* LWTabBarController.swift in Sources */,
 				547FF2302074D08600D224E9 /* LWRecommendViewModel.swift in Sources */,
+				548010A42079E64800677A06 /* LWCollectionBaseCell.swift in Sources */,
 				54D5E6BF2071DC47001CD691 /* UIBarButtonItem-Extension.swift in Sources */,
 				54D5E6C4207206E9001CD691 /* Common.swift in Sources */,
 				542F1761207363AE0093A57F /* LWRecommendViewController.swift in Sources */,

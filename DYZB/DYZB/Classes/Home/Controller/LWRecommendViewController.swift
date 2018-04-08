@@ -88,15 +88,22 @@ extension LWRecommendViewController : UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // 0.取出模型对象
+        let group = recommendVM.anchorGroups[indexPath.section]
+        let anchor = group.anchors[indexPath.item]
+        
         // 1.定义cell
-        var cell : UICollectionViewCell!
+        var cell : LWCollectionBaseCell!
         
         // 2.取出cell
         if indexPath.section == 1 { // 颜值组
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath)
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! LWPrettyCell
         } else { // 普通组
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! LWNormalCell
         }
+        
+        // 3.将模型赋值给cell
+        cell.anchor = anchor
         
         return cell
     }

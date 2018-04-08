@@ -126,6 +126,9 @@ extension LWPageTitleView {
         // 1.获取当前label
         guard let currentLabel = tapGes.view as? UILabel else {return}
         
+        // 1.5.如果是重复点击同一个title，那么直接返回
+        if currentLabel.tag == currentIndex {return}
+        
         // 2.获取之前的label
         let oldLabel = titleLabels[currentIndex]
         
