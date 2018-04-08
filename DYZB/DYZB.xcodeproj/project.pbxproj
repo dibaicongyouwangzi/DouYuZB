@@ -18,6 +18,8 @@
 		547FF2302074D08600D224E9 /* LWRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FF22F2074D08600D224E9 /* LWRecommendViewModel.swift */; };
 		547FF2322074D7E300D224E9 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FF2312074D7E300D224E9 /* NSDate-Extension.swift */; };
 		548010A42079E64800677A06 /* LWCollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548010A32079E64800677A06 /* LWCollectionBaseCell.swift */; };
+		548010A62079F25200677A06 /* LWRecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548010A52079F25200677A06 /* LWRecommendCycleView.swift */; };
+		548010A82079F25C00677A06 /* LWRecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 548010A72079F25C00677A06 /* LWRecommendCycleView.xib */; };
 		548A18E220753061007AE3C7 /* LWAnchorGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A18E120753061007AE3C7 /* LWAnchorGroupModel.swift */; };
 		548A18EC20768782007AE3C7 /* LWAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A18EB20768782007AE3C7 /* LWAnchorModel.swift */; };
 		54D5E66F2071C845001CD691 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D5E66D2071C845001CD691 /* Main.storyboard */; };
@@ -51,6 +53,8 @@
 		547FF22F2074D08600D224E9 /* LWRecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWRecommendViewModel.swift; sourceTree = "<group>"; };
 		547FF2312074D7E300D224E9 /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		548010A32079E64800677A06 /* LWCollectionBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWCollectionBaseCell.swift; sourceTree = "<group>"; };
+		548010A52079F25200677A06 /* LWRecommendCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWRecommendCycleView.swift; sourceTree = "<group>"; };
+		548010A72079F25C00677A06 /* LWRecommendCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LWRecommendCycleView.xib; sourceTree = "<group>"; };
 		548A18E120753061007AE3C7 /* LWAnchorGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWAnchorGroupModel.swift; sourceTree = "<group>"; };
 		548A18EB20768782007AE3C7 /* LWAnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LWAnchorModel.swift; sourceTree = "<group>"; };
 		54D5E6662071C845001CD691 /* DYZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,6 +262,8 @@
 			children = (
 				542F1764207384440093A57F /* LWCollectionHeaderView.swift */,
 				542F1765207384440093A57F /* LWCollectionHeaderView.xib */,
+				548010A52079F25200677A06 /* LWRecommendCycleView.swift */,
+				548010A72079F25C00677A06 /* LWRecommendCycleView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -425,6 +431,7 @@
 				54D5E6892071CAC6001CD691 /* Home.storyboard in Resources */,
 				547FF20520745FC600D224E9 /* LWNormalCell.xib in Resources */,
 				54D5E6922071CB82001CD691 /* Profile.storyboard in Resources */,
+				548010A82079F25C00677A06 /* LWRecommendCycleView.xib in Resources */,
 				54D5E68C2071CB61001CD691 /* Live.storyboard in Resources */,
 				54D5E6742071C845001CD691 /* LaunchScreen.storyboard in Resources */,
 				54D5E68F2071CB72001CD691 /* Follow.storyboard in Resources */,
@@ -494,6 +501,7 @@
 				54D5E6BC2071D6D7001CD691 /* LWHomeViewController.swift in Sources */,
 				54D5E6C82072219E001CD691 /* UIColor-Extension.swift in Sources */,
 				54D5E6C2207201DB001CD691 /* LWPageTitleView.swift in Sources */,
+				548010A62079F25200677A06 /* LWRecommendCycleView.swift in Sources */,
 				54D5E6A52071D590001CD691 /* LWTabBarController.swift in Sources */,
 				547FF2302074D08600D224E9 /* LWRecommendViewModel.swift in Sources */,
 				548010A42079E64800677A06 /* LWCollectionBaseCell.swift in Sources */,

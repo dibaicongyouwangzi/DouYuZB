@@ -13,6 +13,7 @@ private let kItemW = (kScreenW - 3 * kItemMargin) / 2
 private let kNormalItemH = kItemW * 3 / 4
 private let kPrettyItemH = kItemW * 4 / 3
 private let kHeaderViewH : CGFloat = 50
+let kCycleViewH : CGFloat = kScreenW * 3 / 8
 
 private let kNormalCellID = "kNormalCellID"
 private let kPrettyCellID = "kPrettyCellID"
@@ -41,8 +42,14 @@ class LWRecommendViewController: UIViewController {
         collectionView.register(UINib(nibName: "LWNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
         collectionView.register(UINib(nibName: "LWPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
         collectionView.register(UINib(nibName: "LWCollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
-        
+        collectionView.autoresizesSubviews = false
         return collectionView
+    }()
+    
+    private lazy var cycleView : LWRecommendCycleView = {
+        let cycleView = LWRecommendCycleView.recommendCycleView()
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        return cycleView
     }()
     
     // MARK:- 系统回调函数
@@ -64,6 +71,12 @@ extension LWRecommendViewController {
     private func setupUI() {
         // 1.将UICollectionView添加到控制器的view中
         view.addSubview(collectionView)
+        
+        // 2.将cycleView添加到UICollectionView中
+        collectionView.addSubview(cycleView)
+        
+        // 3.设置collectionView的内边距
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
     }
 }
 

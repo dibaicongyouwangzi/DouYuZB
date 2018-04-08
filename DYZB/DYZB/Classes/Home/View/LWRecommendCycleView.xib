@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LWRecommendCycleView" customModule="DYZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="188"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pX3-dt-Qbg">
+                    <rect key="frame" x="0.0" y="0.0" width="363" height="188"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IWk-5W-oUX">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="aQa-Wu-bKG"/>
+                    </connections>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ahd-RN-hXg">
+                    <rect key="frame" x="314" y="151" width="39" height="37"/>
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ahd-RN-hXg" secondAttribute="trailing" constant="10" id="PbE-Pp-U5i"/>
+                <constraint firstAttribute="bottom" secondItem="pX3-dt-Qbg" secondAttribute="bottom" id="TfZ-eR-E9s"/>
+                <constraint firstAttribute="trailing" secondItem="pX3-dt-Qbg" secondAttribute="trailing" id="g1f-pT-qSp"/>
+                <constraint firstItem="pX3-dt-Qbg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hka-ex-Aac"/>
+                <constraint firstItem="pX3-dt-Qbg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qRt-jF-CPQ"/>
+                <constraint firstAttribute="bottom" secondItem="ahd-RN-hXg" secondAttribute="bottom" id="y1n-pF-yfU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="pX3-dt-Qbg" id="4LH-sJ-xAg"/>
+                <outlet property="pageControl" destination="ahd-RN-hXg" id="8zW-Uk-uN8"/>
+            </connections>
+            <point key="canvasLocation" x="27.5" y="294"/>
+        </view>
+    </objects>
+</document>
