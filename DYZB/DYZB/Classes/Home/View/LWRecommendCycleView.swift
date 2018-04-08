@@ -31,7 +31,7 @@ class LWRecommendCycleView: UIView {
         super.awakeFromNib()
 
         // 注册cell
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kCycleCellID)
+        collectionView.register(UINib(nibName: "LWCollectionCycleCell", bundle: nil), forCellWithReuseIdentifier: kCycleCellID)
         
         // 设置collectionView的layout
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
@@ -58,11 +58,21 @@ extension LWRecommendCycleView : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellID, for: indexPath) as! LWCollectionCycleCell
         
-        let cycleModel = cycleModels![indexPath.item]
+        cell.cycleModel = cycleModels![indexPath.item]
         
-        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.red : UIColor.blue
         return cell
+    }
+}
+
+// MARK:- 遵守UICollectionView的代理协议
+extension LWRecommendCycleView : UICollectionViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // 1.获取滚动的偏移量
+        let offsetX = scrollView.contentOffset.x + scrollView.bounds.width * 0.5
+        
+        // 2.计算pageControl的currentIndex
+        pageControl.currentPage = Int(offsetX / scrollView.bounds.width)
     }
 }
