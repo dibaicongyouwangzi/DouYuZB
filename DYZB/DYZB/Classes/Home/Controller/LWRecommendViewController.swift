@@ -83,8 +83,14 @@ extension LWRecommendViewController {
 // MARK:- 请求数据
 extension LWRecommendViewController {
     private func loadData() {
-        recommendVM.requestData {
-            self.collectionView.reloadData()
+        // 1.请求推荐数据
+        recommendVM.requestData { [weak self] in
+            self?.collectionView.reloadData()
+        }
+        
+        // 2.请求轮播数据
+        recommendVM.requestCycleData {
+            self.cycleView.cycleModels = self.recommendVM.cycleModels
         }
     }
 }
