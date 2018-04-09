@@ -15,6 +15,8 @@ class LWAnchorGroupModel: NSObject {
     var tag_name : String = ""
     // 组显示的图标
     var icon_name : String = "home_header_normal"
+    // 游戏对应的图标
+    var icon_url : String = ""
     // 定义主播的模型对象
     lazy var anchors : [LWAnchorModel] = [LWAnchorModel]()
 
@@ -26,7 +28,8 @@ class LWAnchorGroupModel: NSObject {
         self.room_list = dict["room_list"] as? [[String : NSObject]] ?? []
         self.tag_name = dict["tag_name"] as? String ?? ""
         self.icon_name = dict["icon_name"] as? String ?? "home_header_normal"
-        
+        self.icon_url = dict["icon_url"] as? String ?? ""
+
         super.init()
         setValuesForKeys(dict)
     }

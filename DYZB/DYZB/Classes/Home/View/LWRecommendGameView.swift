@@ -9,8 +9,26 @@
 import UIKit
 
 private let kGameCellID = "kGameCellID"
+private let kEdgeInsetMargin : CGFloat = 10
 
 class LWRecommendGameView: UIView {
+    // MARK:- 定义数据的属性
+    var groups : [LWAnchorGroupModel]? {
+        didSet {
+            // 1.移除前两组数据(热门、颜值)
+            groups?.removeFirst()
+            groups?.removeFirst()
+            
+            // 1.5.添加更多组
+            let moreGroup = LWAnchorGroupModel()
+            moreGroup.tag_name = "更多"
+            groups?.append(moreGroup)
+            
+            // 2.刷新表格
+            collectionView.reloadData()
+        }
+    }
+    
     // MARK:- 控件属性
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -19,7 +37,10 @@ class LWRecommendGameView: UIView {
         super.awakeFromNib()
     
         // 注册cell
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kGameCellID)
+        collectionView.register(UINib(nibName: "LWCollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
+        
+        // 给collectionView添加内边距
+        collectionView.contentInset = UIEdgeInsetsMake(0, kEdgeInsetMargin, 0, kEdgeInsetMargin)
     }
 }
 
@@ -33,12 +54,15 @@ extension LWRecommendGameView {
 // MARK:- 遵守UICollectionView的数据源协议
 extension LWRecommendGameView : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return groups?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath)
-        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.blue : UIColor.red
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath) as! LWCollectionGameCell
+        
+        cell.group = groups![indexPath.item]
+
         return cell
     }
 }

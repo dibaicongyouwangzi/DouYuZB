@@ -95,7 +95,10 @@ extension LWRecommendViewController {
     private func loadData() {
         // 1.请求推荐数据
         recommendVM.requestData { [weak self] in
+            // 1.1.展示推荐数据
             self?.collectionView.reloadData()
+            // 1.2.将数据传递给LWRecommendGameView
+            self?.gameView.groups = self?.recommendVM.anchorGroups
         }
         
         // 2.请求轮播数据
