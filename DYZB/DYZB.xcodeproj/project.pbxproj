@@ -29,6 +29,7 @@
 		548A18EC20768782007AE3C7 /* LWAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A18EB20768782007AE3C7 /* LWAnchorModel.swift */; };
 		5494AEB2207B090F00CEBFB2 /* LWCollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5494AEB0207B090F00CEBFB2 /* LWCollectionGameCell.swift */; };
 		5494AEB3207B090F00CEBFB2 /* LWCollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5494AEB1207B090F00CEBFB2 /* LWCollectionGameCell.xib */; };
+		5494AEB5207B34A100CEBFB2 /* LWGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5494AEB4207B34A100CEBFB2 /* LWGameViewController.swift */; };
 		54D5E66F2071C845001CD691 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D5E66D2071C845001CD691 /* Main.storyboard */; };
 		54D5E6712071C845001CD691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54D5E6702071C845001CD691 /* Assets.xcassets */; };
 		54D5E6742071C845001CD691 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D5E6722071C845001CD691 /* LaunchScreen.storyboard */; };
@@ -71,6 +72,7 @@
 		548A18EB20768782007AE3C7 /* LWAnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LWAnchorModel.swift; sourceTree = "<group>"; };
 		5494AEB0207B090F00CEBFB2 /* LWCollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWCollectionGameCell.swift; sourceTree = "<group>"; };
 		5494AEB1207B090F00CEBFB2 /* LWCollectionGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LWCollectionGameCell.xib; sourceTree = "<group>"; };
+		5494AEB4207B34A100CEBFB2 /* LWGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWGameViewController.swift; sourceTree = "<group>"; };
 		54D5E6662071C845001CD691 /* DYZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D5E66E2071C845001CD691 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54D5E6702071C845001CD691 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 			children = (
 				54D5E6BB2071D6D7001CD691 /* LWHomeViewController.swift */,
 				542F1760207363AE0093A57F /* LWRecommendViewController.swift */,
+				5494AEB4207B34A100CEBFB2 /* LWGameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				548010A62079F25200677A06 /* LWRecommendCycleView.swift in Sources */,
 				54D5E6A52071D590001CD691 /* LWTabBarController.swift in Sources */,
 				547FF2302074D08600D224E9 /* LWRecommendViewModel.swift in Sources */,
+				5494AEB5207B34A100CEBFB2 /* LWGameViewController.swift in Sources */,
 				548010A42079E64800677A06 /* LWCollectionBaseCell.swift in Sources */,
 				54D5E6BF2071DC47001CD691 /* UIBarButtonItem-Extension.swift in Sources */,
 				54D5E6C4207206E9001CD691 /* Common.swift in Sources */,
