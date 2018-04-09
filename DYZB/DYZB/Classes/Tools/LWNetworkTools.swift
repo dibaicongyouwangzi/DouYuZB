@@ -15,7 +15,7 @@ enum MethodType {
 }
 
 class LWNetworkTools {
-    class func requestData(type : MethodType, URLString : String, parameters : [String : String]? = nil, finishedCallback : @escaping (_ result : AnyObject) -> ()) {
+    class func requestData(type : MethodType, URLString : String, parameters : [String : Any]? = nil, finishedCallback : @escaping (_ result : Any) -> ()) {
         // 1.获取类型
         let method = type == .GET ? HTTPMethod.get : HTTPMethod.post
         
@@ -27,7 +27,7 @@ class LWNetworkTools {
                 return
             }
             // 4.将结果回调出去
-            finishedCallback(result as AnyObject)
+            finishedCallback(result)
         }
     }
 }
