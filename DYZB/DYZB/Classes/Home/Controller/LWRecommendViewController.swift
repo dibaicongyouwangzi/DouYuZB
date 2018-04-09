@@ -14,6 +14,7 @@ private let kNormalItemH = kItemW * 3 / 4
 private let kPrettyItemH = kItemW * 4 / 3
 private let kHeaderViewH : CGFloat = 50
 let kCycleViewH : CGFloat = kScreenW * 3 / 8
+private let kGameViewH : CGFloat = 90
 
 private let kNormalCellID = "kNormalCellID"
 private let kPrettyCellID = "kPrettyCellID"
@@ -48,8 +49,14 @@ class LWRecommendViewController: UIViewController {
     
     private lazy var cycleView : LWRecommendCycleView = {
         let cycleView = LWRecommendCycleView.recommendCycleView()
-        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        cycleView.frame = CGRect(x: 0, y: -(kCycleViewH + kGameViewH), width: kScreenW, height: kCycleViewH)
         return cycleView
+    }()
+    
+    private lazy var gameView : LWRecommendGameView = {
+        let gameView = LWRecommendGameView.recommendGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameView
     }()
     
     // MARK:- 系统回调函数
@@ -76,7 +83,10 @@ extension LWRecommendViewController {
         collectionView.addSubview(cycleView)
         
         // 3.设置collectionView的内边距
-        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH + kGameViewH, left: 0, bottom: 0, right: 0)
+    
+        // 4.将gameView添加到collectionView中
+        collectionView.addSubview(gameView)
     }
 }
 

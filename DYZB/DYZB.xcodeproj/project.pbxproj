@@ -23,6 +23,8 @@
 		54863741207A1D0A005F6EBF /* LWCycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54863740207A1D0A005F6EBF /* LWCycleModel.swift */; };
 		54863744207A3CBB005F6EBF /* LWCollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54863742207A3CBB005F6EBF /* LWCollectionCycleCell.swift */; };
 		54863745207A3CBB005F6EBF /* LWCollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54863743207A3CBB005F6EBF /* LWCollectionCycleCell.xib */; };
+		54863747207AFA86005F6EBF /* LWRecommendGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54863746207AFA86005F6EBF /* LWRecommendGameView.swift */; };
+		54863749207AFA92005F6EBF /* LWRecommendGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54863748207AFA92005F6EBF /* LWRecommendGameView.xib */; };
 		548A18E220753061007AE3C7 /* LWAnchorGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A18E120753061007AE3C7 /* LWAnchorGroupModel.swift */; };
 		548A18EC20768782007AE3C7 /* LWAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A18EB20768782007AE3C7 /* LWAnchorModel.swift */; };
 		54D5E66F2071C845001CD691 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D5E66D2071C845001CD691 /* Main.storyboard */; };
@@ -61,6 +63,8 @@
 		54863740207A1D0A005F6EBF /* LWCycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWCycleModel.swift; sourceTree = "<group>"; };
 		54863742207A3CBB005F6EBF /* LWCollectionCycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWCollectionCycleCell.swift; sourceTree = "<group>"; };
 		54863743207A3CBB005F6EBF /* LWCollectionCycleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LWCollectionCycleCell.xib; sourceTree = "<group>"; };
+		54863746207AFA86005F6EBF /* LWRecommendGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWRecommendGameView.swift; sourceTree = "<group>"; };
+		54863748207AFA92005F6EBF /* LWRecommendGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LWRecommendGameView.xib; sourceTree = "<group>"; };
 		548A18E120753061007AE3C7 /* LWAnchorGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWAnchorGroupModel.swift; sourceTree = "<group>"; };
 		548A18EB20768782007AE3C7 /* LWAnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LWAnchorModel.swift; sourceTree = "<group>"; };
 		54D5E6662071C845001CD691 /* DYZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -273,6 +277,8 @@
 				548010A72079F25C00677A06 /* LWRecommendCycleView.xib */,
 				54863742207A3CBB005F6EBF /* LWCollectionCycleCell.swift */,
 				54863743207A3CBB005F6EBF /* LWCollectionCycleCell.xib */,
+				54863746207AFA86005F6EBF /* LWRecommendGameView.swift */,
+				54863748207AFA92005F6EBF /* LWRecommendGameView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -445,6 +451,7 @@
 				54D5E68C2071CB61001CD691 /* Live.storyboard in Resources */,
 				54D5E6742071C845001CD691 /* LaunchScreen.storyboard in Resources */,
 				54D5E68F2071CB72001CD691 /* Follow.storyboard in Resources */,
+				54863749207AFA92005F6EBF /* LWRecommendGameView.xib in Resources */,
 				547FF20920746E1B00D224E9 /* LWPrettyCell.xib in Resources */,
 				54D5E6712071C845001CD691 /* Assets.xcassets in Resources */,
 				54D5E66F2071C845001CD691 /* Main.storyboard in Resources */,
@@ -518,6 +525,7 @@
 				548010A42079E64800677A06 /* LWCollectionBaseCell.swift in Sources */,
 				54D5E6BF2071DC47001CD691 /* UIBarButtonItem-Extension.swift in Sources */,
 				54D5E6C4207206E9001CD691 /* Common.swift in Sources */,
+				54863747207AFA86005F6EBF /* LWRecommendGameView.swift in Sources */,
 				542F1761207363AE0093A57F /* LWRecommendViewController.swift in Sources */,
 				547FF2322074D7E300D224E9 /* NSDate-Extension.swift in Sources */,
 				547FF20820746E1B00D224E9 /* LWPrettyCell.swift in Sources */,
