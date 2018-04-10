@@ -49,6 +49,7 @@ class LWGameViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.contentInset = UIEdgeInsetsMake(kHeaderViewH + kGameViewH, 0, 0, 0)
+        collectionView.autoresizesSubviews = false
         collectionView.register(UINib(nibName: "LWCollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
         collectionView.register(UINib(nibName: "LWCollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kGameHeaderViewID)
         
@@ -68,8 +69,11 @@ class LWGameViewController: UIViewController {
  // MARK:- 请求数据
  extension LWGameViewController {
     fileprivate func loadData() {
+        // 1.展示“全部”游戏
         gameVM.loadAllGameModel {
             self.collectionView.reloadData()
+            // 2.展示”常用“游戏
+            self.gameView.games = Array(self.gameVM.games[0..<10])
         }
     }
  }
