@@ -11,7 +11,8 @@ import UIKit
 private let kEdgeMargin : CGFloat = 10
 private let kItemW : CGFloat = (kScreenW - 2 * kEdgeMargin) / 3
 private let kItemH : CGFloat = kItemW * 6 / 5
- private let kHeaderViewH : CGFloat = 50
+private let kHeaderViewH : CGFloat = 50
+private let kGameViewH : CGFloat = 90
  
 private let kGameCellID = "kGameCellID"
 private let kGameHeaderViewID = "kGameHeaderViewID"
@@ -19,8 +20,20 @@ private let kGameHeaderViewID = "kGameHeaderViewID"
 class LWGameViewController: UIViewController {
 
     // MARK:- 懒加载属性
+    fileprivate lazy var gameView : LWRecommendGameView = {
+        let gameView = LWRecommendGameView.recommendGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameView
+    }()
+    fileprivate lazy var topHeaderView : LWCollectionHeaderView = {
+        let headerView = LWCollectionHeaderView.collectionHeaderView()
+        headerView.frame = CGRect(x: 0, y: -(kHeaderViewH + kGameViewH), width: kScreenW, height: kHeaderViewH)
+        headerView.iconImageView.image = UIImage(named : "Img_orange")
+        headerView.titleLabel.text = "常见"
+        headerView.moreBtn.isHidden = true
+        return headerView
+    }()
     fileprivate lazy var gameVM : LWGameViewModel = LWGameViewModel()
-    
     fileprivate lazy var collectionView : UICollectionView = { [unowned self] in
         // 1.创建布局
         let layout = UICollectionViewFlowLayout()
@@ -35,6 +48,7 @@ class LWGameViewController: UIViewController {
         collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        collectionView.contentInset = UIEdgeInsetsMake(kHeaderViewH + kGameViewH, 0, 0, 0)
         collectionView.register(UINib(nibName: "LWCollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
         collectionView.register(UINib(nibName: "LWCollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kGameHeaderViewID)
         
@@ -63,7 +77,12 @@ class LWGameViewController: UIViewController {
 // MARK:- 设置UI界面
 extension LWGameViewController {
     fileprivate func setupUI() {
+        // 1.添加UICollectionView
         view.addSubview(collectionView)
+        // 2.添加顶部的headerView
+        collectionView.addSubview(topHeaderView)
+        // 3.将常用游戏的view添加到collectionView中
+        collectionView.addSubview(gameView)
     }
 }
  

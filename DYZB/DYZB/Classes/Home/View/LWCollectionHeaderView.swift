@@ -28,3 +28,9 @@ class LWCollectionHeaderView: UICollectionReusableView {
     
     }    
 }
+
+extension LWCollectionHeaderView {
+    class func collectionHeaderView() -> LWCollectionHeaderView {
+        return Bundle.main.loadNibNamed("LWCollectionHeaderView", owner: nil, options: nil)?.first as! LWCollectionHeaderView
+    }
+}
