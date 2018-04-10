@@ -10,6 +10,8 @@
 		542F1761207363AE0093A57F /* LWRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542F1760207363AE0093A57F /* LWRecommendViewController.swift */; };
 		542F1766207384440093A57F /* LWCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542F1764207384440093A57F /* LWCollectionHeaderView.swift */; };
 		542F1767207384440093A57F /* LWCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 542F1765207384440093A57F /* LWCollectionHeaderView.xib */; };
+		544AA9B7207C42DA00E7B821 /* LWGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544AA9B6207C42D900E7B821 /* LWGameViewModel.swift */; };
+		544AA9B9207C435D00E7B821 /* LWGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544AA9B8207C435D00E7B821 /* LWGameModel.swift */; };
 		547FF20420745FC600D224E9 /* LWNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FF20220745FC600D224E9 /* LWNormalCell.swift */; };
 		547FF20520745FC600D224E9 /* LWNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547FF20320745FC600D224E9 /* LWNormalCell.xib */; };
 		547FF20820746E1B00D224E9 /* LWPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FF20620746E1B00D224E9 /* LWPrettyCell.swift */; };
@@ -53,6 +55,8 @@
 		542F1760207363AE0093A57F /* LWRecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWRecommendViewController.swift; sourceTree = "<group>"; };
 		542F1764207384440093A57F /* LWCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWCollectionHeaderView.swift; sourceTree = "<group>"; };
 		542F1765207384440093A57F /* LWCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LWCollectionHeaderView.xib; sourceTree = "<group>"; };
+		544AA9B6207C42D900E7B821 /* LWGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWGameViewModel.swift; sourceTree = "<group>"; };
+		544AA9B8207C435D00E7B821 /* LWGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWGameModel.swift; sourceTree = "<group>"; };
 		547FF20220745FC600D224E9 /* LWNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWNormalCell.swift; sourceTree = "<group>"; };
 		547FF20320745FC600D224E9 /* LWNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LWNormalCell.xib; sourceTree = "<group>"; };
 		547FF20620746E1B00D224E9 /* LWPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWPrettyCell.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				547FF22F2074D08600D224E9 /* LWRecommendViewModel.swift */,
+				544AA9B6207C42D900E7B821 /* LWGameViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -163,12 +168,12 @@
 		54D5E67B2071C9B9001CD691 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				54D5E67F2071C9B9001CD691 /* Main */,
 				54D5E67D2071C9B9001CD691 /* Home */,
 				54D5E67E2071C9B9001CD691 /* Live */,
 				54D5E67C2071C9B9001CD691 /* Follow */,
 				54D5E6832071C9B9001CD691 /* Profile */,
 				54D5E6842071C9B9001CD691 /* Tools */,
+				54D5E67F2071C9B9001CD691 /* Main */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				54863740207A1D0A005F6EBF /* LWCycleModel.swift */,
+				544AA9B8207C435D00E7B821 /* LWGameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -535,6 +541,7 @@
 				5494AEB5207B34A100CEBFB2 /* LWGameViewController.swift in Sources */,
 				548010A42079E64800677A06 /* LWCollectionBaseCell.swift in Sources */,
 				54D5E6BF2071DC47001CD691 /* UIBarButtonItem-Extension.swift in Sources */,
+				544AA9B7207C42DA00E7B821 /* LWGameViewModel.swift in Sources */,
 				54D5E6C4207206E9001CD691 /* Common.swift in Sources */,
 				54863747207AFA86005F6EBF /* LWRecommendGameView.swift in Sources */,
 				542F1761207363AE0093A57F /* LWRecommendViewController.swift in Sources */,
@@ -544,6 +551,7 @@
 				54D5E6C620721DE2001CD691 /* LWPageContentView.swift in Sources */,
 				542F1766207384440093A57F /* LWCollectionHeaderView.swift in Sources */,
 				54D5E6852071C9B9001CD691 /* AppDelegate.swift in Sources */,
+				544AA9B9207C435D00E7B821 /* LWGameModel.swift in Sources */,
 				54863741207A1D0A005F6EBF /* LWCycleModel.swift in Sources */,
 				548A18E220753061007AE3C7 /* LWAnchorGroupModel.swift in Sources */,
 				548A18EC20768782007AE3C7 /* LWAnchorModel.swift in Sources */,

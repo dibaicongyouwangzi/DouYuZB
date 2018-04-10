@@ -24,4 +24,13 @@ class LWCollectionGameCell: UICollectionViewCell {
             iconImageView.kf.setImage(with: ImageResource(downloadURL: iconURL as URL), placeholder: UIImage(named : "home_more_btn"), options: nil, progressBlock: nil, completionHandler: nil)
         }
     }
+    
+    var game : LWGameModel? {
+        didSet {
+            titleLabel.text = game?.tag_name
+            
+            let iconURL = NSURL(string : game?.pic_url ?? "")!
+            iconImageView.kf.setImage(with: ImageResource(downloadURL: iconURL as URL), placeholder: UIImage(named : "home_more_btn"), options: nil, progressBlock: nil, completionHandler: nil)
+        }
+    }
 }

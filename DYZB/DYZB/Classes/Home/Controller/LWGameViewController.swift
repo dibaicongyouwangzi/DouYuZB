@@ -17,6 +17,8 @@ private let kGameCellID = "kGameCellID"
 class LWGameViewController: UIViewController {
 
     // MARK:- 懒加载属性
+    fileprivate lazy var gameVM : LWGameViewModel = LWGameViewModel()
+    
     fileprivate lazy var collectionView : UICollectionView = { [unowned self] in
         // 1.创建布局
         let layout = UICollectionViewFlowLayout()
@@ -27,8 +29,10 @@ class LWGameViewController: UIViewController {
         
         // 2.创建UICollectionView
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
+        collectionView.backgroundColor = UIColor.white
         collectionView.register(UINib(nibName: "LWCollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
         collectionView.dataSource = self
+        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         return collectionView
     }()
@@ -38,8 +42,19 @@ class LWGameViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        
+        loadData()
     }
 }
+ 
+ // MARK:- 请求数据
+ extension LWGameViewController {
+    fileprivate func loadData() {
+        gameVM.loadAllGameModel {
+            self.collectionView.reloadData()
+        }
+    }
+ }
  
 // MARK:- 设置UI界面
 extension LWGameViewController {
@@ -51,13 +66,13 @@ extension LWGameViewController {
 // MARK:- 遵守UICollectionView的数据源代理
  extension LWGameViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 60
+        return gameVM.games.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath) as! LWCollectionGameCell
         
-        cell.backgroundColor = UIColor.getRandomColor()
+        cell.game = gameVM.games[indexPath.item]
         
         return cell
     }
