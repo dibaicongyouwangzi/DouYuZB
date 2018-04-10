@@ -13,6 +13,7 @@ private let kItemW = (kScreenW - 3 * kItemMargin) / 2
 private let kNormalItemH = kItemW * 3 / 4
 private let kPrettyItemH = kItemW * 4 / 3
 private let kHeaderViewH : CGFloat = 50
+
 let kCycleViewH : CGFloat = kScreenW * 3 / 8
 private let kGameViewH : CGFloat = 90
 
@@ -25,7 +26,7 @@ class LWRecommendViewController: UIViewController {
     // MARK:- 懒加载属性
     private lazy var recommendVM : LWRecommendViewModel = LWRecommendViewModel()
     
-    private lazy var collectionView : UICollectionView = { [unowned self] in
+    fileprivate lazy var collectionView : UICollectionView = { [unowned self] in
         // 1.创建布局
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: kItemW, height: kNormalItemH)
