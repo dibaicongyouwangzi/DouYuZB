@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5418D5FA207C89FE00E2DBD9 /* LWAmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5418D5F9207C89FE00E2DBD9 /* LWAmuseViewController.swift */; };
+		5418D5FC207C8D1000E2DBD9 /* LWAmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5418D5FB207C8D1000E2DBD9 /* LWAmuseViewModel.swift */; };
 		542F1761207363AE0093A57F /* LWRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542F1760207363AE0093A57F /* LWRecommendViewController.swift */; };
 		542F1766207384440093A57F /* LWCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542F1764207384440093A57F /* LWCollectionHeaderView.swift */; };
 		542F1767207384440093A57F /* LWCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 542F1765207384440093A57F /* LWCollectionHeaderView.xib */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		5418D5F9207C89FE00E2DBD9 /* LWAmuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWAmuseViewController.swift; sourceTree = "<group>"; };
+		5418D5FB207C8D1000E2DBD9 /* LWAmuseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWAmuseViewModel.swift; sourceTree = "<group>"; };
 		542F1760207363AE0093A57F /* LWRecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWRecommendViewController.swift; sourceTree = "<group>"; };
 		542F1764207384440093A57F /* LWCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWCollectionHeaderView.swift; sourceTree = "<group>"; };
 		542F1765207384440093A57F /* LWCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LWCollectionHeaderView.xib; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				547FF22F2074D08600D224E9 /* LWRecommendViewModel.swift */,
 				544AA9B6207C42D900E7B821 /* LWGameViewModel.swift */,
+				5418D5FB207C8D1000E2DBD9 /* LWAmuseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				54863741207A1D0A005F6EBF /* LWCycleModel.swift in Sources */,
 				548A18E220753061007AE3C7 /* LWAnchorGroupModel.swift in Sources */,
 				548A18EC20768782007AE3C7 /* LWAnchorModel.swift in Sources */,
+				5418D5FC207C8D1000E2DBD9 /* LWAmuseViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,7 +24,7 @@ class LWAnchorGroupModel: NSObject {
         
     }
     
-    init(dict : [String : NSObject]) {
+    init(dict : [String : Any]) {
         self.room_list = dict["room_list"] as? [[String : NSObject]] ?? []
         self.tag_name = dict["tag_name"] as? String ?? ""
         self.icon_name = dict["icon_name"] as? String ?? "home_header_normal"

@@ -20,6 +20,8 @@ private let kHeaderViewID = "kHeaderViewID"
 
 class LWAmuseViewController: UIViewController {
 
+    // MARK:- 懒加载属性
+    fileprivate lazy var amuseVM : LWAmuseViewModel = LWAmuseViewModel()
     fileprivate lazy var collectionView : UICollectionView = { [unowned self] in
         // 1.创建布局
         let layout = UICollectionViewFlowLayout()
@@ -47,6 +49,17 @@ class LWAmuseViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        
+        loadData()
+    }
+}
+
+// MARK:- 请求数据
+extension LWAmuseViewController {
+    fileprivate func loadData() {
+        amuseVM.loadAmuseData {
+            self.collectionView.reloadData()
+        }
     }
 }
 
@@ -60,20 +73,30 @@ extension LWAmuseViewController {
 // MARK:- 遵守UICollectionView的数据源协议 & 代理协议
 extension LWAmuseViewController : UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 8
+        return amuseVM.anchorGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return amuseVM.anchorGroups[section].anchors.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // 1.取出cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! LWNormalCell
         
         // 2.给cell设置数据
-        cell.backgroundColor = UIColor.getRandomColor()
+        cell.anchor = amuseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        // 1.取出headerView
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! LWCollectionHeaderView
+        
+        // 2.给headerView设置数据
+        headerView.group = amuseVM.anchorGroups[indexPath.section]
+        
+        return headerView
     }
 }
