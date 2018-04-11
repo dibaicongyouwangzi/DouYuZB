@@ -11,6 +11,8 @@
 		5418D5FC207C8D1000E2DBD9 /* LWAmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5418D5FB207C8D1000E2DBD9 /* LWAmuseViewModel.swift */; };
 		5418D5FF207C946D00E2DBD9 /* LWBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5418D5FE207C946D00E2DBD9 /* LWBaseViewModel.swift */; };
 		5418D623207D917D00E2DBD9 /* LWBaseAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5418D622207D917D00E2DBD9 /* LWBaseAnchorViewController.swift */; };
+		5418D625207DA68E00E2DBD9 /* LWAmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5418D624207DA68E00E2DBD9 /* LWAmuseMenuView.swift */; };
+		5418D627207DA6D100E2DBD9 /* LWAmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5418D626207DA6D100E2DBD9 /* LWAmuseMenuView.xib */; };
 		542F1761207363AE0093A57F /* LWRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542F1760207363AE0093A57F /* LWRecommendViewController.swift */; };
 		542F1766207384440093A57F /* LWCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542F1764207384440093A57F /* LWCollectionHeaderView.swift */; };
 		542F1767207384440093A57F /* LWCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 542F1765207384440093A57F /* LWCollectionHeaderView.xib */; };
@@ -60,6 +62,8 @@
 		5418D5FB207C8D1000E2DBD9 /* LWAmuseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWAmuseViewModel.swift; sourceTree = "<group>"; };
 		5418D5FE207C946D00E2DBD9 /* LWBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWBaseViewModel.swift; sourceTree = "<group>"; };
 		5418D622207D917D00E2DBD9 /* LWBaseAnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWBaseAnchorViewController.swift; sourceTree = "<group>"; };
+		5418D624207DA68E00E2DBD9 /* LWAmuseMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWAmuseMenuView.swift; sourceTree = "<group>"; };
+		5418D626207DA6D100E2DBD9 /* LWAmuseMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LWAmuseMenuView.xib; sourceTree = "<group>"; };
 		542F1760207363AE0093A57F /* LWRecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWRecommendViewController.swift; sourceTree = "<group>"; };
 		542F1764207384440093A57F /* LWCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWCollectionHeaderView.swift; sourceTree = "<group>"; };
 		542F1765207384440093A57F /* LWCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LWCollectionHeaderView.xib; sourceTree = "<group>"; };
@@ -314,6 +318,8 @@
 				54863748207AFA92005F6EBF /* LWRecommendGameView.xib */,
 				5494AEB0207B090F00CEBFB2 /* LWCollectionGameCell.swift */,
 				5494AEB1207B090F00CEBFB2 /* LWCollectionGameCell.xib */,
+				5418D624207DA68E00E2DBD9 /* LWAmuseMenuView.swift */,
+				5418D626207DA6D100E2DBD9 /* LWAmuseMenuView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -478,6 +484,7 @@
 			files = (
 				542F1767207384440093A57F /* LWCollectionHeaderView.xib in Resources */,
 				54863745207A3CBB005F6EBF /* LWCollectionCycleCell.xib in Resources */,
+				5418D627207DA6D100E2DBD9 /* LWAmuseMenuView.xib in Resources */,
 				54D5E6862071C9B9001CD691 /* Info.plist in Resources */,
 				54D5E6892071CAC6001CD691 /* Home.storyboard in Resources */,
 				547FF20520745FC600D224E9 /* LWNormalCell.xib in Resources */,
@@ -554,6 +561,7 @@
 				54863744207A3CBB005F6EBF /* LWCollectionCycleCell.swift in Sources */,
 				5418D5FF207C946D00E2DBD9 /* LWBaseViewModel.swift in Sources */,
 				54D5E6BC2071D6D7001CD691 /* LWHomeViewController.swift in Sources */,
+				5418D625207DA68E00E2DBD9 /* LWAmuseMenuView.swift in Sources */,
 				54D5E6C82072219E001CD691 /* UIColor-Extension.swift in Sources */,
 				54D5E6C2207201DB001CD691 /* LWPageTitleView.swift in Sources */,
 				5418D5FA207C89FE00E2DBD9 /* LWAmuseViewController.swift in Sources */,
