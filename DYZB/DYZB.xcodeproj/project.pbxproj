@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5418D5FA207C89FE00E2DBD9 /* LWAmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5418D5F9207C89FE00E2DBD9 /* LWAmuseViewController.swift */; };
 		5418D5FC207C8D1000E2DBD9 /* LWAmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5418D5FB207C8D1000E2DBD9 /* LWAmuseViewModel.swift */; };
+		5418D5FF207C946D00E2DBD9 /* LWBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5418D5FE207C946D00E2DBD9 /* LWBaseViewModel.swift */; };
+		5418D623207D917D00E2DBD9 /* LWBaseAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5418D622207D917D00E2DBD9 /* LWBaseAnchorViewController.swift */; };
 		542F1761207363AE0093A57F /* LWRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542F1760207363AE0093A57F /* LWRecommendViewController.swift */; };
 		542F1766207384440093A57F /* LWCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542F1764207384440093A57F /* LWCollectionHeaderView.swift */; };
 		542F1767207384440093A57F /* LWCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 542F1765207384440093A57F /* LWCollectionHeaderView.xib */; };
@@ -56,6 +58,8 @@
 /* Begin PBXFileReference section */
 		5418D5F9207C89FE00E2DBD9 /* LWAmuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWAmuseViewController.swift; sourceTree = "<group>"; };
 		5418D5FB207C8D1000E2DBD9 /* LWAmuseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWAmuseViewModel.swift; sourceTree = "<group>"; };
+		5418D5FE207C946D00E2DBD9 /* LWBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWBaseViewModel.swift; sourceTree = "<group>"; };
+		5418D622207D917D00E2DBD9 /* LWBaseAnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWBaseAnchorViewController.swift; sourceTree = "<group>"; };
 		542F1760207363AE0093A57F /* LWRecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWRecommendViewController.swift; sourceTree = "<group>"; };
 		542F1764207384440093A57F /* LWCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWCollectionHeaderView.swift; sourceTree = "<group>"; };
 		542F1765207384440093A57F /* LWCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LWCollectionHeaderView.xib; sourceTree = "<group>"; };
@@ -121,6 +125,14 @@
 				68A939EFF7A74C70ABBF6C76 /* Pods_DYZB.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5418D5FD207C945400E2DBD9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5418D5FE207C946D00E2DBD9 /* LWBaseViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		547FF22E2074CFA700D224E9 /* ViewModel */ = {
@@ -221,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				54D5E66D2071C845001CD691 /* Main.storyboard */,
+				5418D5FD207C945400E2DBD9 /* ViewModel */,
 				548A18E020753028007AE3C7 /* Model */,
 				54D5E6C0207201CA001CD691 /* View */,
 				54D5E6A32071D590001CD691 /* Controller */,
@@ -263,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				54D5E6A42071D590001CD691 /* LWTabBarController.swift */,
+				5418D622207D917D00E2DBD9 /* LWBaseAnchorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -538,6 +552,7 @@
 				547FF22D2074CBA300D224E9 /* LWNetworkTools.swift in Sources */,
 				547FF20420745FC600D224E9 /* LWNormalCell.swift in Sources */,
 				54863744207A3CBB005F6EBF /* LWCollectionCycleCell.swift in Sources */,
+				5418D5FF207C946D00E2DBD9 /* LWBaseViewModel.swift in Sources */,
 				54D5E6BC2071D6D7001CD691 /* LWHomeViewController.swift in Sources */,
 				54D5E6C82072219E001CD691 /* UIColor-Extension.swift in Sources */,
 				54D5E6C2207201DB001CD691 /* LWPageTitleView.swift in Sources */,
@@ -558,6 +573,7 @@
 				54D5E6C620721DE2001CD691 /* LWPageContentView.swift in Sources */,
 				542F1766207384440093A57F /* LWCollectionHeaderView.swift in Sources */,
 				54D5E6852071C9B9001CD691 /* AppDelegate.swift in Sources */,
+				5418D623207D917D00E2DBD9 /* LWBaseAnchorViewController.swift in Sources */,
 				544AA9B9207C435D00E7B821 /* LWGameModel.swift in Sources */,
 				54863741207A1D0A005F6EBF /* LWCycleModel.swift in Sources */,
 				548A18E220753061007AE3C7 /* LWAnchorGroupModel.swift in Sources */,

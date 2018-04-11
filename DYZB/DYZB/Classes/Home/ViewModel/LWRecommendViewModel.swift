@@ -8,9 +8,8 @@
 
 import UIKit
 
-class LWRecommendViewModel {
+class LWRecommendViewModel : LWBaseViewModel {
     // MARK:- 懒加载属性
-    lazy var anchorGroups : [LWAnchorGroupModel] = [LWAnchorGroupModel]()
     private lazy var bigDataGroup : LWAnchorGroupModel = LWAnchorGroupModel()
     private lazy var prettyGroup : LWAnchorGroupModel = LWAnchorGroupModel()
     
@@ -100,19 +99,8 @@ extension LWRecommendViewModel {
          http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&offset=0&time=1522857088
          */
         dGroup.enter()
-        LWNetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { (result) in
-            // 1.将result转成字典类型
-            guard let resultDict = result as? [String : NSObject] else {return}
-            
-            // 2.根据data这个key，获取数组
-            guard let dataArr =  resultDict["data"] as? [[String : NSObject]] else {return}
-            
-            // 3.遍历数组，获取字典，并且将字典转成模型对象
-            for dict in dataArr {
-                let group = LWAnchorGroupModel(dict: dict)
-                self.anchorGroups.append(group)
-            }
-            // 4.离开组
+        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) {
+            // 离开组
             dGroup.leave()
         }
         
