@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5401FBE8207DE8D3003454EC /* LWFunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5401FBE7207DE8D3003454EC /* LWFunnyViewController.swift */; };
 		5418D5FA207C89FE00E2DBD9 /* LWAmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5418D5F9207C89FE00E2DBD9 /* LWAmuseViewController.swift */; };
 		5418D5FC207C8D1000E2DBD9 /* LWAmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5418D5FB207C8D1000E2DBD9 /* LWAmuseViewModel.swift */; };
 		5418D5FF207C946D00E2DBD9 /* LWBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5418D5FE207C946D00E2DBD9 /* LWBaseViewModel.swift */; };
@@ -60,6 +61,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5401FBE7207DE8D3003454EC /* LWFunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWFunnyViewController.swift; sourceTree = "<group>"; };
 		5418D5F9207C89FE00E2DBD9 /* LWAmuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWAmuseViewController.swift; sourceTree = "<group>"; };
 		5418D5FB207C8D1000E2DBD9 /* LWAmuseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWAmuseViewModel.swift; sourceTree = "<group>"; };
 		5418D5FE207C946D00E2DBD9 /* LWBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWBaseViewModel.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				542F1760207363AE0093A57F /* LWRecommendViewController.swift */,
 				5494AEB4207B34A100CEBFB2 /* LWGameViewController.swift */,
 				5418D5F9207C89FE00E2DBD9 /* LWAmuseViewController.swift */,
+				5401FBE7207DE8D3003454EC /* LWFunnyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 				54D5E6C82072219E001CD691 /* UIColor-Extension.swift in Sources */,
 				54D5E6C2207201DB001CD691 /* LWPageTitleView.swift in Sources */,
 				5418D5FA207C89FE00E2DBD9 /* LWAmuseViewController.swift in Sources */,
+				5401FBE8207DE8D3003454EC /* LWFunnyViewController.swift in Sources */,
 				548010A62079F25200677A06 /* LWRecommendCycleView.swift in Sources */,
 				54D5E6A52071D590001CD691 /* LWTabBarController.swift in Sources */,
 				547FF2302074D08600D224E9 /* LWRecommendViewModel.swift in Sources */,
