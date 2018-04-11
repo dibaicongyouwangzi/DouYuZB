@@ -43,6 +43,10 @@ extension LWAmuseViewController {
         // 2.请求数据
         amuseVM.loadAmuseData {
             self.collectionView.reloadData()
+            
+            var tempGroups = self.amuseVM.anchorGroups
+            tempGroups.removeFirst()
+            self.menuView.groups = tempGroups
         }
     }
 }

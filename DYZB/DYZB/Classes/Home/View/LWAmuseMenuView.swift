@@ -12,6 +12,13 @@ private let kMenuCellID = "kMenuCellID"
 
 class LWAmuseMenuView: UIView {
     
+    // MARK:- 定义属性
+    var groups : [LWAnchorGroupModel]? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
     // MARK:- 控件属性
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -39,7 +46,16 @@ extension LWAmuseMenuView {
 
 extension LWAmuseMenuView : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        
+        if groups == nil {
+            return 0
+        }
+        
+        // 计算页码的算法
+        let pageNum = (groups!.count - 1) / 8 + 1
+        pageControl.numberOfPages = pageNum
+        
+        return pageNum
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -47,8 +63,34 @@ extension LWAmuseMenuView : UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kMenuCellID, for: indexPath) as! LWAmuseMenuCell
         
         // 2.给cell设置数据
-        cell.backgroundColor = UIColor.getRandomColor()
+        setupCellDataWithCell(cell: cell, indexPath: indexPath)
         
         return cell
+    }
+    
+    private func setupCellDataWithCell(cell : LWAmuseMenuCell, indexPath : IndexPath) {
+        /*
+         1.取出起始位置 & 终点位置
+         // 0页：0 ~ 7
+         // 1页：8 ~ 15
+         // 2页：16 ~ 23
+         */
+        let startIndex = indexPath.item * 8
+        var endIndex = (indexPath.item + 1 ) * 8 - 1
+        
+        // 2.判断越界问题
+        if endIndex > groups!.count - 1 {
+            endIndex = groups!.count - 1
+        }
+        
+        // 3.取出数据，并且赋值给cell
+        cell.clipsToBounds = true
+        cell.groups = Array(groups![startIndex...endIndex])
+    }
+}
+
+extension LWAmuseMenuView : UICollectionViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        pageControl.currentPage = Int(scrollView.contentOffset.x / scrollView.bounds.width)
     }
 }
