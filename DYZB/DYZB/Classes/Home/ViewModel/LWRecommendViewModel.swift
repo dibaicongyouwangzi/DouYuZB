@@ -99,7 +99,7 @@ extension LWRecommendViewModel {
          http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&offset=0&time=1522857088
          */
         dGroup.enter()
-        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) {
+        loadAnchorData(isGroupData: true, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) {
             // 离开组
             dGroup.leave()
         }

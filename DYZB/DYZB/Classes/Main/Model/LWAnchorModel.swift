@@ -24,7 +24,7 @@ class LWAnchorModel: NSObject {
     // 所在城市
     var anchor_city : String = ""
     
-    init(dict : [String : NSObject]) {
+    init(dict : [String : Any]) {
         self.room_id = dict["room_id"] as? Int ?? 0
         self.vertical_src = dict["vertical_src"] as? String ?? ""
         self.isVertical = dict["isVertical"] as? Int ?? 0

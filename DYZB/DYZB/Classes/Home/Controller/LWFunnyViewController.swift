@@ -11,7 +11,8 @@ import UIKit
 private let kTopMargin : CGFloat = 8
 
 class LWFunnyViewController: LWBaseAnchorViewController {
-    
+    // MARK:- 懒加载ViewModel对象
+    fileprivate lazy var funnyVM : LWFunnyViewModel = LWFunnyViewModel()
 }
 
 extension LWFunnyViewController {
@@ -22,5 +23,17 @@ extension LWFunnyViewController {
         layout.headerReferenceSize = CGSize.zero
         
         collectionView.contentInset = UIEdgeInsetsMake(kTopMargin, 0, 0, 0)
+    }
+}
+
+extension LWFunnyViewController {
+    override func loadData() {
+        // 1.给父类中的ViewModel进行赋值
+        baseVM = funnyVM
+        
+        // 2.请求数据
+        funnyVM.loadFunnyData {
+            self.collectionView.reloadData()
+        }
     }
 }
