@@ -59,6 +59,8 @@
 		54D5E6C82072219E001CD691 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5E6C72072219D001CD691 /* UIColor-Extension.swift */; };
 		54E78118207DFB1000F472AC /* LWFunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E78117207DFB1000F472AC /* LWFunnyViewModel.swift */; };
 		54E7811C207E4B2700F472AC /* LWBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E7811B207E4B2700F472AC /* LWBaseViewController.swift */; };
+		54E78122207E69DB00F472AC /* LWRoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E78121207E69DB00F472AC /* LWRoomShowViewController.swift */; };
+		54E78124207E69E600F472AC /* LWRoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E78123207E69E600F472AC /* LWRoomNormalViewController.swift */; };
 		C63653A000D9917E3B69DB1B /* Pods_DYZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A939EFF7A74C70ABBF6C76 /* Pods_DYZB.framework */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +118,8 @@
 		54D5E6C72072219D001CD691 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		54E78117207DFB1000F472AC /* LWFunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWFunnyViewModel.swift; sourceTree = "<group>"; };
 		54E7811B207E4B2700F472AC /* LWBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWBaseViewController.swift; sourceTree = "<group>"; };
+		54E78121207E69DB00F472AC /* LWRoomShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWRoomShowViewController.swift; sourceTree = "<group>"; };
+		54E78123207E69E600F472AC /* LWRoomNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWRoomNormalViewController.swift; sourceTree = "<group>"; };
 		68A939EFF7A74C70ABBF6C76 /* Pods_DYZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77604922F9C5236ED36CCBDB /* Pods-DYZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.debug.xcconfig"; sourceTree = "<group>"; };
 		F9212BCD4B7FA5F9ADBCB445 /* Pods-DYZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.release.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 		54D5E67B2071C9B9001CD691 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				54E7811D207E69D000F472AC /* Room */,
 				54D5E67D2071C9B9001CD691 /* Home */,
 				54D5E67E2071C9B9001CD691 /* Live */,
 				54D5E67C2071C9B9001CD691 /* Follow */,
@@ -426,6 +431,39 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		54E7811D207E69D000F472AC /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				54E7811E207E69D000F472AC /* Controller */,
+				54E7811F207E69D000F472AC /* Model */,
+				54E78120207E69D000F472AC /* View */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		54E7811E207E69D000F472AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				54E78121207E69DB00F472AC /* LWRoomShowViewController.swift */,
+				54E78123207E69E600F472AC /* LWRoomNormalViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		54E7811F207E69D000F472AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		54E78120207E69D000F472AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9052F2FBC1F7A951B82E900B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -585,6 +623,7 @@
 				5418D5FA207C89FE00E2DBD9 /* LWAmuseViewController.swift in Sources */,
 				5401FBE8207DE8D3003454EC /* LWFunnyViewController.swift in Sources */,
 				548010A62079F25200677A06 /* LWRecommendCycleView.swift in Sources */,
+				54E78122207E69DB00F472AC /* LWRoomShowViewController.swift in Sources */,
 				54D5E6A52071D590001CD691 /* LWTabBarController.swift in Sources */,
 				547FF2302074D08600D224E9 /* LWRecommendViewModel.swift in Sources */,
 				5494AEB5207B34A100CEBFB2 /* LWGameViewController.swift in Sources */,
@@ -592,6 +631,7 @@
 				54D5E6BF2071DC47001CD691 /* UIBarButtonItem-Extension.swift in Sources */,
 				544AA9B7207C42DA00E7B821 /* LWGameViewModel.swift in Sources */,
 				54E78118207DFB1000F472AC /* LWFunnyViewModel.swift in Sources */,
+				54E78124207E69E600F472AC /* LWRoomNormalViewController.swift in Sources */,
 				54D5E6C4207206E9001CD691 /* Common.swift in Sources */,
 				54863747207AFA86005F6EBF /* LWRecommendGameView.swift in Sources */,
 				542F1761207363AE0093A57F /* LWRecommendViewController.swift in Sources */,
