@@ -17,7 +17,7 @@ private let kGameViewH : CGFloat = 90
 private let kGameCellID = "kGameCellID"
 private let kGameHeaderViewID = "kGameHeaderViewID"
 
-class LWGameViewController: UIViewController {
+class LWGameViewController: LWBaseViewController {
 
     // MARK:- 懒加载属性
     fileprivate lazy var gameView : LWRecommendGameView = {
@@ -74,18 +74,29 @@ class LWGameViewController: UIViewController {
             self.collectionView.reloadData()
             // 2.展示”常用“游戏
             self.gameView.games = Array(self.gameVM.games[0..<10])
+            
+            // 3.请求数据完成
+            self.loadDataFinished()
         }
     }
  }
  
 // MARK:- 设置UI界面
 extension LWGameViewController {
-    fileprivate func setupUI() {
-        // 1.添加UICollectionView
+    override func setupUI() {
+        // 1.给父类中内容view的引用进行赋值
+        contentView = collectionView
+        
+        // 2.添加UICollectionView
         view.addSubview(collectionView)
-        // 2.添加顶部的headerView
+        
+        // 3.调用super.setupUI()
+        super.setupUI()
+        
+        // 4.添加顶部的headerView
         collectionView.addSubview(topHeaderView)
-        // 3.将常用游戏的view添加到collectionView中
+        
+        // 5.将常用游戏的view添加到collectionView中
         collectionView.addSubview(gameView)
     }
 }

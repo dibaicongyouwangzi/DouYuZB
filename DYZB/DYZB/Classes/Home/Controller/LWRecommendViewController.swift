@@ -63,6 +63,8 @@ extension LWRecommendViewController {
             self?.collectionView.reloadData()
             // 1.2.将数据传递给LWRecommendGameView
             self?.gameView.groups = self?.recommendVM.anchorGroups
+            // 1.3.请求数据完成
+            self?.loadDataFinished()
         }
         
         // 2.请求轮播数据

@@ -34,6 +34,9 @@ extension LWFunnyViewController {
         // 2.请求数据
         funnyVM.loadFunnyData {
             self.collectionView.reloadData()
+            
+            // 3.请求数据完成
+            self.loadDataFinished()
         }
     }
 }

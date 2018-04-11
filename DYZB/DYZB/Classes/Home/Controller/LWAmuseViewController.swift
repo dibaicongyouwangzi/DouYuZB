@@ -47,6 +47,10 @@ extension LWAmuseViewController {
             var tempGroups = self.amuseVM.anchorGroups
             tempGroups.removeFirst()
             self.menuView.groups = tempGroups
+            
+            // 3.请求数据完成
+            self.loadDataFinished()
         }
+        
     }
 }

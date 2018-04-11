@@ -18,7 +18,7 @@ private let kNormalCellID = "kNormalCellID"
 let kPrettyCellID = "kPrettyCellID"
 private let kHeaderViewID = "kHeaderViewID"
 
-class LWBaseAnchorViewController: UIViewController {
+class LWBaseAnchorViewController: LWBaseViewController {
 
     // MARK:- 定义属性
     var baseVM : LWBaseViewModel!
@@ -65,8 +65,15 @@ extension LWBaseAnchorViewController {
 
 // MARK:- 设置UI界面
 extension LWBaseAnchorViewController {
-    @objc func setupUI() {
+    @objc override func setupUI() {
+        // 1.给父类中内容view的引用进行赋值
+        contentView = collectionView
+        
+        // 2.添加collection
         view.addSubview(collectionView)
+        
+        // 3.调用super.setupUI()
+        super.setupUI()
     }
 }
 
