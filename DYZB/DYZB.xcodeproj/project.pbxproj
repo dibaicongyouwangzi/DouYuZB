@@ -61,6 +61,7 @@
 		54E7811C207E4B2700F472AC /* LWBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E7811B207E4B2700F472AC /* LWBaseViewController.swift */; };
 		54E78122207E69DB00F472AC /* LWRoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E78121207E69DB00F472AC /* LWRoomShowViewController.swift */; };
 		54E78124207E69E600F472AC /* LWRoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E78123207E69E600F472AC /* LWRoomNormalViewController.swift */; };
+		54E78126207E6DCF00F472AC /* LWCustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E78125207E6DCF00F472AC /* LWCustomNavigationController.swift */; };
 		C63653A000D9917E3B69DB1B /* Pods_DYZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A939EFF7A74C70ABBF6C76 /* Pods_DYZB.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +121,7 @@
 		54E7811B207E4B2700F472AC /* LWBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWBaseViewController.swift; sourceTree = "<group>"; };
 		54E78121207E69DB00F472AC /* LWRoomShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWRoomShowViewController.swift; sourceTree = "<group>"; };
 		54E78123207E69E600F472AC /* LWRoomNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWRoomNormalViewController.swift; sourceTree = "<group>"; };
+		54E78125207E6DCF00F472AC /* LWCustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWCustomNavigationController.swift; sourceTree = "<group>"; };
 		68A939EFF7A74C70ABBF6C76 /* Pods_DYZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77604922F9C5236ED36CCBDB /* Pods-DYZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.debug.xcconfig"; sourceTree = "<group>"; };
 		F9212BCD4B7FA5F9ADBCB445 /* Pods-DYZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.release.xcconfig"; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				54D5E6A42071D590001CD691 /* LWTabBarController.swift */,
 				5418D622207D917D00E2DBD9 /* LWBaseAnchorViewController.swift */,
 				54E7811B207E4B2700F472AC /* LWBaseViewController.swift */,
+				54E78125207E6DCF00F472AC /* LWCustomNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 				54D5E6C620721DE2001CD691 /* LWPageContentView.swift in Sources */,
 				542F1766207384440093A57F /* LWCollectionHeaderView.swift in Sources */,
 				54D5E6852071C9B9001CD691 /* AppDelegate.swift in Sources */,
+				54E78126207E6DCF00F472AC /* LWCustomNavigationController.swift in Sources */,
 				5418D623207D917D00E2DBD9 /* LWBaseAnchorViewController.swift in Sources */,
 				544AA9B9207C435D00E7B821 /* LWGameModel.swift in Sources */,
 				54863741207A1D0A005F6EBF /* LWCycleModel.swift in Sources */,
